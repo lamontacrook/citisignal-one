@@ -344,7 +344,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "image",
-        "label": "Images",
+        "label": "My New Image",
         "multi": false
       },
       {
