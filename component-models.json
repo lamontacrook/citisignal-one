@@ -348,6 +348,18 @@
         "multi": false
       },
       {
+        "component": "custom-asset-namespace:custom-asset",
+        "value": "",
+        "label": "DM Image",
+        "valueType": "string",
+        "configUrl": "https://main--demo-boilerplate-xwalk--lamontacrook.hlx.page/tools/assets-selector/image.config.json",
+        "name": "dm-image"
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset-mimetype",
+        "valueType": "string"
+      },
+      {
         "component": "text",
         "valueType": "string",
         "name": "imageAlt",

@@ -1,0 +1,12 @@
+{
+  "repoNames": [
+    "delivery-p128652-e1252175.adobeaemcloud.com",
+    "author-p128652-e1252175.adobeaemcloud.com"
+  ],
+  "preferredDimensions": {
+    "minWidth": 500,
+    "maxWidth": 2000,
+    "minHeight": 500,
+    "maxHeight": 2000
+  }
+}
