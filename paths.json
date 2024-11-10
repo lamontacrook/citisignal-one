@@ -3,6 +3,7 @@
       "/content/citisignal/:/",
       "/content/citisignal/configuration:/.helix/config.json",
       "/content/citisignal/metadata:/metadata.json",
+      "/content/citisignal/headers:/.helix/headers.json",
       "/content/citisignal/configs:/configs.json",
       "/content/citisignal/configs-stage:/configs-stage.json",
       "/content/citisignal/configs-dev:/configs-dev.json",
