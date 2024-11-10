@@ -726,7 +726,7 @@
         "value": "",
         "label": "DM Image",
         "valueType": "string",
-        "configUrl": "https://main--demo-boilerplate-xwalk--lamontacrook.hlx.page/tools/assets-selector/image.config.json",
+        "configUrl": "https://dm--citisignal-one--lamontacrook.aem.page/tools/asset-selector/image.config.json",
         "name": "image"
       },
       {
