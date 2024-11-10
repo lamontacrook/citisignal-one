@@ -727,7 +727,7 @@
         "label": "DM Image",
         "valueType": "string",
         "configUrl": "https://main--demo-boilerplate-xwalk--lamontacrook.hlx.page/tools/assets-selector/image.config.json",
-        "name": "dm-image"
+        "name": "image"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
