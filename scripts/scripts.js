@@ -289,12 +289,13 @@ export function createOptimizedPicture(src, alt = '', eager = false, breakpoints
   // fallback
   breakpoints.forEach((br, i) => {
     const searchParams = new URLSearchParams({ width: br.width, format: ext });
-
     if (i < breakpoints.length - 1) {
       const source = document.createElement('source');
       if (br.media) source.setAttribute('media', br.media);
       source.setAttribute('srcset', appendQueryParams(url, searchParams));
+      console.log(source);
       picture.appendChild(source);
+      console.log(picture);
     } else {
       const img = document.createElement('img');
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
@@ -303,6 +304,7 @@ export function createOptimizedPicture(src, alt = '', eager = false, breakpoints
       img.setAttribute('src', appendQueryParams(url, searchParams));
     }
   });
+  console.log(picture);
   return picture;
 }
 
@@ -327,11 +329,38 @@ function decorateButtons(main) {
     console.log(a);
     const deliveryUrl = a.href;
     const altText = 'my alt';
+    // const block = whatBlockIsThis(a);
+    const imgName = deliveryUrl.substring(deliveryUrl.lastIndexOf('/') + 1);
+    const bp = getMetadata('cards');
     let breakpoints = [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }];
+
+    if (bp) {
+      const bps = bp.split('|');
+      const bpS = bps.map((b) => b.split(',').map((p) => p.trim()));
+      breakpoints = bpS.map((n) => {
+        const obj = {};
+        n.forEach((i) => {
+          const t = i.split(/:(.*)/s);
+          obj[t[0].trim()] = t[1].trim();
+        });
+        return obj;
+      });
+    } else {
+      const format = getMetadata(imgName.toLowerCase().replace('.', '-'));
+      const formats = format.split('|');
+      const formatObj = {};
+      formats.forEach((i) => {
+        const [a, b] = i.split('=');
+        formatObj[a] = b;
+      });
+      breakpoints = breakpoints.map((n) => (
+        { ...n, ...formatObj }
+      ));
+    }
     const picture = createOptimizedPicture(deliveryUrl, altText, false, breakpoints);
-    a.parentElement.replaceWith(picture);
+    
     console.log(picture);
-     
+    a.parentElement.replaceWith(picture);
   });
   libDecorateButtons(main);
 }
