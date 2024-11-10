@@ -722,11 +722,16 @@
     "id": "card",
     "fields": [
       {
-        "component": "reference",
+        "component": "custom-asset-namespace:custom-asset",
+        "value": "",
+        "label": "DM Image",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "configUrl": "https://main--demo-boilerplate-xwalk--lamontacrook.hlx.page/tools/assets-selector/image.config.json",
+        "name": "dm-image"
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset-mimetype",
+        "valueType": "string"
       },
       {
         "component": "richtext",
