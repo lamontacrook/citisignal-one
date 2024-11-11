@@ -99,7 +99,7 @@
       {
         "component": "custom-asset-namespace:custom-asset",
         "name": "dm-image",
-        "label": "Dynmaic Media Image",
+        "label": "Dynamic Media Image",
         "configUrl": "https://main--demo-boilerplate-xwalk--lamontacrook.hlx.page/tools/assets-selector/image.config.json",
         "valueType": "string"
       },
