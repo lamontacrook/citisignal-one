@@ -331,7 +331,8 @@ function decorateButtons(main) {
     const altText = 'my alt';
     const block = whatBlockIsThis(a)
     const imgName = deliveryUrl.substring(deliveryUrl.lastIndexOf('/') + 1);
-    const bp = getMetadata(block);
+    // const bp = getMetadata(block);
+    const bp = getMetadata('columns');
     let breakpoints = [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }];
 
     if (bp) {
