@@ -35,6 +35,10 @@ main .hero-container > div {
   padding: 1.5rem 10rem;
 }
 
+.hero.coverage {
+  flex-direction: column;
+}
+
 .hero > div:nth-child(2),
 .hero > div:nth-child(3) {
   flex: 1 1 50%;
@@ -48,6 +52,10 @@ main .hero-container > div {
 .hero div:nth-child(3) > div {
   width: 65%;
   margin-left: auto;
+}
+
+.hero.coverage div:nth-child(3) > div {
+  margin-left: 0;
 }
 
 .hero.small > div:nth-child(2),
@@ -116,6 +124,21 @@ main .hero-container > div {
   object-fit: cover;
   box-sizing: border-box;
   top: 20%;
+}
+
+.hero.coverage picture {
+  top:0;
+  right: -49%;
+}
+
+.hero.coverage picture::before {
+  content: '';
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 50%);
 }
 
 .hero img {
